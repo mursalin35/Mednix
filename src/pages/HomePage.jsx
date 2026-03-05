@@ -9,6 +9,8 @@ import Latest from '../components/Home/Latest';
 import Feedback from '../components/Home/Feedback';
 import BookAppointment from '../components/Home/BookAppointment';
 import Herosection from '../components/Home/Herosection';
+import ClinicalSection from '../components/Home/ClinicalSection';
+import MidBanner from '../components/Home/MidBanner';
 
 const HomePage = () => {
     return (
@@ -19,6 +21,8 @@ const HomePage = () => {
            <OurDepartment/>
            <OurBenefits/>
            <MedicalProfessionals/>
+           <ClinicalSection/>
+           <MidBanner/>
            <Feedback/>
            <BookAppointment/>
 

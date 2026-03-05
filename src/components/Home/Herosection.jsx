@@ -19,14 +19,7 @@ const slides = [
   },
 ];
 
-const navLinks = [
-  { label: "HOME", hasDropdown: true },
-  { label: "PAGES", hasDropdown: true },
-  { label: "SERVICES", hasDropdown: true },
-  { label: "CASE STUDIES", hasDropdown: true },
-  { label: "BLOGS", hasDropdown: true },
-  { label: "CONTACT", hasDropdown: false },
-];
+
 
 const Herosection = () => {
   const [current, setCurrent] = useState(0);
@@ -214,73 +207,7 @@ const Herosection = () => {
         .text-hidden { opacity: 0; transform: translateY(12px); }
       `}</style>
 
-      {/* ── NAVBAR ── */}
-      <nav className="mednix-nav">
-        {/* Logo */}
-        <a className="nav-logo" href="#">
-          <div style={{
-            width: 36, height: 36, borderRadius: 8,
-            background: "linear-gradient(135deg, #0d9488, #0891b2)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-          }}>
-            <svg viewBox="0 0 36 36" width="22" height="22" fill="none">
-              <rect x="14" y="5" width="8" height="26" rx="2" fill="white" opacity="0.95"/>
-              <rect x="5" y="14" width="26" height="8" rx="2" fill="white" opacity="0.95"/>
-            </svg>
-          </div>
-          <span style={{ fontSize: 20, fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em" }}>Mednix</span>
-        </a>
-
-        {/* Nav links */}
-        <div className="nav-links">
-          {navLinks.map((l, i) => (
-            <button key={l.label} className={`nav-link${i === 0 ? " active" : ""}`}>
-              {l.label}
-              {l.hasDropdown && (
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="6 9 12 15 18 9"/>
-                </svg>
-              )}
-            </button>
-          ))}
-        </div>
-
-        {/* Right side */}
-        <div className="nav-right">
-          <div className="emergency-call">
-            <div style={{
-              width: 36, height: 36, borderRadius: "50%",
-              border: "2px solid #0d9488",
-              display: "flex", alignItems: "center", justifyContent: "center",
-            }}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.81 19.79 19.79 0 0 1 1.6 1.18 2 2 0 0 1 3.57 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 15.3v.01z"/>
-              </svg>
-            </div>
-            <div>
-              <p style={{ fontSize: 10, color: "#94a3b8", fontWeight: 500, lineHeight: 1 }}>Emergency Call:</p>
-              <p style={{ fontSize: 14, fontWeight: 800, color: "#0f172a", lineHeight: 1.4 }}>(888) 4567890</p>
-            </div>
-          </div>
-
-          <button className="appt-btn">
-            Appointment
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </button>
-
-          <button style={{
-            width: 38, height: 38, borderRadius: 8,
-            border: "1.5px solid #e2e8f0", background: "white",
-            display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer",
-          }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            </svg>
-          </button>
-        </div>
-      </nav>
+     
 
       {/* ── HERO SLIDER ── */}
       <div className="hero-wrap">
