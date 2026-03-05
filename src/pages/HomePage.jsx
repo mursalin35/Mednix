@@ -23,8 +23,8 @@ const HomePage = () => {
            <MedicalProfessionals/>
            <ClinicalSection/>
            <MidBanner/>
-           <Feedback/>
            <BookAppointment/>
+           <Feedback/>
 
            <Latest/>
            <Footer/>
