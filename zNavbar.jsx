@@ -32,12 +32,10 @@ export default function Navbar() {
       >
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-600 to-cyan-600 flex items-center justify-center">
-            <span className="text-white font-bold text-lg">+</span>
-          </div>
-          <span className="text-white text-xl font-extrabold tracking-tight">
-            Mednix
-          </span>
+         <div>
+            <img className=" h-9" src="/src/assets/logo.png" alt="" />
+         </div>
+         
         </div>
 
         {/* Desktop Nav */}
