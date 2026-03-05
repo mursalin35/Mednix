@@ -11,8 +11,10 @@ const useCountUp = (target, duration = 2000, triggered = false) => {
     let current = 0;
     const interval = setInterval(() => {
       current += increment;
-      if (current >= target) { setValue(target); clearInterval(interval); }
-      else setValue(Math.floor(current * 10) / 10);
+      if (current >= target) {
+        setValue(target);
+        clearInterval(interval);
+      } else setValue(Math.floor(current * 10) / 10);
     }, duration / steps);
     return () => clearInterval(interval);
   }, [triggered, target, duration]);
@@ -28,8 +30,10 @@ const MidBanner = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.3 }
+      ([entry]) => {
+        if (entry.isIntersecting) setVisible(true);
+      },
+      { threshold: 0.3 },
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
@@ -107,69 +111,55 @@ const MidBanner = () => {
         src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=1800&q=85"
         alt="Doctor with patient"
         style={{
-          position: "absolute", inset: 0,
-          width: "100%", height: "100%",
-          objectFit: "cover", objectPosition: "center 30%",
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "center 30%",
           display: "block",
         }}
       />
 
       {/* Left dark gradient */}
-      <div style={{
-        position: "absolute", inset: 0,
-        background: "linear-gradient(90deg, rgba(10,22,44,0.45) 0%, rgba(10,22,44,0.1) 50%, transparent 100%)",
-        pointerEvents: "none",
-      }} />
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background:
+            "linear-gradient(90deg, rgba(10,22,44,0.45) 0%, rgba(10,22,44,0.1) 50%, transparent 100%)",
+          pointerEvents: "none",
+        }}
+      />
 
       {/* Floating glass stats card */}
-      <div className={`stats-card ${visible ? "anim-in" : ""}`} style={{ opacity: visible ? undefined : 0 }}>
+      <div
+        className={`stats-card ${visible ? "anim-in" : ""}`}
+        style={{ opacity: visible ? undefined : 0 }}
+      >
         {/* Doctor icon */}
         <div style={{ marginBottom: 10 }}>
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="rgba(255,255,255,0.9)"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
           </svg>
         </div>
 
         {/* Description */}
-        <p style={{ fontSize: 13, color: "rgba(255,255,255,0.88)", lineHeight: 1.55, maxWidth: 180, marginBottom: 2 }}>
-          Over <strong style={{ color: "white" }}>{Math.floor(years)}+ Years</strong> of Medical Excellence and{" "}
-          <strong style={{ color: "white" }}>{treatments >= 15000 ? "15,000+" : `${Math.floor(treatments).toLocaleString()}+`}</strong> Successful Treatments
+        <p>
+          Over 20 Years of Medical Excellence and 15,000+ Successful Treatments
+          99.9 %
         </p>
-
-        {/* Big rate */}
-        <div className="rate-num">
-          {rate >= 99.9 ? "99.9" : rate.toFixed(1)}%
-        </div>
-
-        {/* Label */}
-        <p style={{ fontSize: 11, color: "rgba(255,255,255,0.65)", marginTop: 4, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase" }}>
-          Success Rate
-        </p>
-
-        {/* Mini divider */}
-        <div style={{ height: 1, background: "rgba(255,255,255,0.2)", margin: "16px 0 12px" }} />
-
-        {/* Mini stats row */}
-        <div style={{ display: "flex", gap: 20 }}>
-          {[
-            { val: "500+", label: "Doctors" },
-            { val: "50+", label: "Specialties" },
-          ].map(s => (
-            <div key={s.label}>
-              <p style={{ fontSize: 18, fontWeight: 800, color: "white", lineHeight: 1 }}>{s.val}</p>
-              <p style={{ fontSize: 10, color: "rgba(255,255,255,0.6)", marginTop: 2, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}>{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Bottom pill badges */}
-      <div className="pill-badges">
-        {["ISO Certified", "24/7 Emergency", "Award Winning Care"].map((p) => (
-          <span className="pill" key={p}>{p}</span>
-        ))}
       </div>
     </section>
   );
