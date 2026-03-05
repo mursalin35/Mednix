@@ -3,6 +3,8 @@ import { GrLocation } from "react-icons/gr";
 import { IoCallOutline } from "react-icons/io5";
 import { MdOutlineMailOutline } from "react-icons/md";
 
+import TextMarquee from "../Home/TextMarquee";
+
 const Footer = () => (
   <footer className="relative overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#0d2137] to-[#2d1a1a] text-white font-sans">
     {/* Ambient blobs */}
@@ -12,9 +14,9 @@ const Footer = () => (
     {/* Main content */}
 
     {/* <div className="relative z-10 max-w-7xl mx-auto px-8 pt-16 pb-10 grid grid-cols-1 lg:grid-cols-4 gap-10"> */}
-    <div className="relative z-10 max-w-7xl mx-auto px-8 pt-16 pb-10 flex gap-10">
+    <div className="relative z-10 max-w-7xl mx-auto px-8 pt-16 pb-10 md:flex  gap-10">
       {/* Brand Card */}
-      <div className="rounded-2xl p-6 shadow-2xl bg-white/95">
+      <div className="rounded-2xl p-6 shadow-2xl bg-white/95 mb-8 md:mb-0">
         <div className="flex items-center gap-2 mb-4">
           <img className="h-12" src="/src/assets/logo2.png" alt="" />
         </div>
@@ -40,13 +42,13 @@ const Footer = () => (
 
       {/* right section  */}
       <div>
-        <div className="grid grid-cols-3">
+        <div className="grid sm:grid-cols-3">
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-bold text-base mb-5 tracking-wide uppercase opacity-90">
+            <h3 className="text-white  font-bold text-base mb-5 mt-6 md:mt-0 tracking-wide uppercase opacity-90">
               Quick Links
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3 ">
               {["About Us", "Our Doctors", "Contact", "Blog Classic"].map(
                 (link) => (
                   <li key={link}>
@@ -64,7 +66,7 @@ const Footer = () => (
 
           {/* Departments */}
           <div>
-            <h3 className="text-white font-bold text-base mb-5 tracking-wide uppercase opacity-90">
+            <h3 className="text-white font-bold text-base mb-5 mt-6 md:mt-0 tracking-wide uppercase opacity-90">
               Department
             </h3>
             <ul className="space-y-3">
@@ -85,7 +87,7 @@ const Footer = () => (
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-white font-bold text-base mb-2 tracking-wide uppercase opacity-90">
+            <h3 className="text-white font-bold text-base mb-2 mt-6 md:mt-0 tracking-wide uppercase opacity-90">
               Newsletter
             </h3>
             <p className="text-sm mb-5 text-[rgba(180,210,230,0.75)] leading-relaxed">
@@ -146,8 +148,19 @@ const Footer = () => (
       </div>
     </div>
 
+    <div>
+      <TextMarquee
+        items={["React", "Next.js", "Node.js", "MongoDB"]}
+        speed={18}
+        bgColor=""
+        textColor="#ffff"
+        iconColor="#00e5ff"
+        textSize="3rem"
+      />
+    </div>
+
     {/* Bottom bar */}
-    <div className="relative z-10 rounded-t-3xl text-center py-4 w-6/12 mx-auto bg-white font-semibold text-black/70">
+    <div className="relative z-10 mt-7 rounded-t-3xl text-center py-4 w-6/12 mx-auto bg-white font-semibold text-black/70">
       © 2026, Mednix. Made with passion by ThemeHt.
     </div>
   </footer>
