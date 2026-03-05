@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react";
-import { ChevronDown, Phone, ArrowRight, Globe, Menu, X } from "lucide-react";
+import {
+  ChevronDown,
+  Phone,
+  ArrowRight,
+  Globe,
+  Menu,
+  X,
+  Link,
+} from "lucide-react";
 
 const navLinks = [
   { label: "HOME", dropdown: ["Home V1", "Home V2", "Home V3"] },
@@ -32,12 +40,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-600 to-cyan-600 flex items-center justify-center">
-            <span className="text-white font-bold text-lg">+</span>
-          </div>
-          <span className="text-white text-xl font-extrabold tracking-tight">
-            Mednix
-          </span>
+          <img className="h-10" src="/src/assets/logo.png" alt="" />
         </div>
 
         {/* Desktop Nav */}
@@ -56,7 +59,7 @@ export default function Navbar() {
 
               {/* Dropdown */}
               {item.dropdown && open === item.label && (
-                <div className="absolute top-full left-0 mt-3 w-48 bg-[#0f213f] border border-white/10 rounded-xl shadow-2xl py-2">
+                <div className="absolute top-full left-0  w-48 bg-[#0f213f] border border-white/10 rounded-xl shadow-2xl py-2">
                   {item.dropdown.map((d) => (
                     <a
                       key={d}
@@ -74,17 +77,6 @@ export default function Navbar() {
 
         {/* Right Side */}
         <div className="hidden lg:flex items-center gap-6">
-          {/* Emergency */}
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full border border-teal-400/60 flex items-center justify-center">
-              <Phone size={16} className="text-teal-400" />
-            </div>
-            <div className="leading-tight">
-              <p className="text-[10px] text-white/60">Emergency Call:</p>
-              <p className="text-sm font-bold text-white">(888) 4567890</p>
-            </div>
-          </div>
-
           {/* Appointment */}
           <button className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-teal-600 to-cyan-600 text-white text-sm font-bold hover:scale-105 transition-all shadow-lg">
             Appointment
