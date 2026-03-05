@@ -7,6 +7,7 @@ import TextMarquee from "../Home/TextMarquee";
 
 const Footer = () => (
   <footer className="relative overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#0d2137] to-[#2d1a1a] text-white font-sans">
+    
     {/* Ambient blobs */}
     <div className="absolute top-0 left-0 w-80 h-80 rounded-full pointer-events-none bg-[radial-gradient(circle,rgba(0,180,180,0.18)_0%,transparent_70%)] blur-[40px] -translate-x-1/3 -translate-y-1/3" />
     <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none bg-[radial-gradient(circle,rgba(180,60,40,0.18)_0%,transparent_70%)] blur-[50px] translate-x-1/3 -translate-y-1/3" />
