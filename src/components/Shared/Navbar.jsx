@@ -6,7 +6,6 @@ import {
   Globe,
   Menu,
   X,
-  Link,
 } from "lucide-react";
 
 const navLinks = [
@@ -40,7 +39,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <img className="h-10" src="/src/assets/logo.png" alt="" />
+          <img className="h-10" src="https://i.ibb.co.com/zd4RVhD/image.png" alt="" />
         </div>
 
         {/* Desktop Nav */}
