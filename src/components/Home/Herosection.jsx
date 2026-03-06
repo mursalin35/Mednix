@@ -81,41 +81,30 @@ export default function HeroSection() {
         <p className="text-sm text-slate-600 leading-relaxed">
           {slide.desc}
         </p>
+
         <button className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-teal-600 to-cyan-600 text-white text-sm font-bold hover:translate-x-1 transition-all">
           {slide.cta}
           <ArrowRight size={14} />
         </button>
+
+        
+
       </div>
 
       {/* Arrows */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 z-40 flex flex-col">
         <button
           onClick={prev}
-          className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-teal-600 transition"
+          className="w-12 h-12 bg-white backdrop-blur-md rounded-tl-selector border border-white/20 text-black flex items-center justify-center hover:bg-teal-600 transition "
         >
           <ArrowUp size={18} />
         </button>
         <button
           onClick={next}
-          className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-teal-600 transition"
+          className="w-12 h-12 bg-white backdrop-blur-md border-t rounded-bl-selector border-black/80 text-black flex items-center justify-center hover:bg-teal-600 transition"
         >
           <ArrowDown size={18} />
         </button>
-      </div>
-
-      {/* Dots */}
-      <div className="absolute bottom-8 left-6 md:left-16 lg:left-24 flex gap-3 z-40">
-        {slides.map((_, i) => (
-          <div
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`h-1 rounded-full transition-all cursor-pointer ${
-              i === current
-                ? "w-10 bg-teal-400"
-                : "w-6 bg-white/40"
-            }`}
-          />
-        ))}
       </div>
 
       {/* Spacer if navbar fixed */}
