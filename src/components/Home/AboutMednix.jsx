@@ -86,7 +86,7 @@ const AboutMednix = () => {
           </div>
 
           {/* -------------------------- */}
-  <div class="relative flex items-center justify-center p- bg-white min-h-[40px]">
+  <div class="relative flex    bg-white min-h-[40px]">
   
   <div class="relative z-10">
     <h1 class="text-[200px]  font-black  leading-none tracking-tighter
