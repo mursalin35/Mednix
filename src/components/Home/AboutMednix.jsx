@@ -53,7 +53,7 @@ const AboutMednix = () => {
               </div>
             </div>
 
-            {/* Team photo */}
+            {/* cover photo */}
             <div className="rounded-b-2xl lg:rounded-xl overflow-hidden  h-72">
               <img
                 src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&q=80"
@@ -67,25 +67,40 @@ const AboutMednix = () => {
 
         {/* RIGHT */}
         <div className="space-y-8 pt-4 lg:pt-0">
-          {/* Counter */}
-          <div className="relative">
+          {/* Number image */}
+          <div className="hidden relative">
             <div className="text-[clamp(72px,9vw,110px)] font-black text-gray-900 flex items-start gap-1">
               25
               <span className="text-[clamp(36px,5vw,56px)] text-teal-600 mt-3 font-black">
                 +
               </span>
             </div>
-            <p className="text-xs font-bold text-gray-400 uppercase mt-1 tracking-wider">
-              Years of Excellence
-            </p>
+           
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10 mix-blend-multiply">
               <img
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&q=80"
+                src="https://www.chesshealthsolutions.com/wp-content/uploads/2023/10/iStock-1473559425.jpg"
                 alt="overlay"
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
+
+          {/* -------------------------- */}
+  <div class="relative flex items-center justify-center p- bg-white min-h-[40px]">
+  
+  <div class="relative z-10">
+    <h1 class="text-[200px]  font-black  leading-none tracking-tighter
+               bg-[url('https://www.chenmed.com/sites/default/files/2024-06/Patient-Centered%20Care%20Strategies%20for%20Building%20Strong%20Doctor-Patient%20Relationships%20.jpg')] 
+               bg-cover bg-center bg-no-repeat 
+               bg-clip-text text-transparent 
+               drop-shadow-2xl">
+      25+
+    </h1>
+  </div>
+
+</div>
+
+          {/* __________________________________ */}
 
           {/* Experts */}
           <div className="flex items-center gap-4">
@@ -110,8 +125,7 @@ const AboutMednix = () => {
             </p>
           </div>
 
-          {/* Divider */}
-          <div className="w-12 h-1 rounded-full bg-gradient-to-r from-teal-600 to-cyan-600" />
+  
 
           {/* Description */}
           <p className="text-sm text-gray-500 max-w-[380px] leading-relaxed">
@@ -125,17 +139,7 @@ const AboutMednix = () => {
             Discover More
           </button>
 
-          {/* Trust badges */}
-          <div className="flex flex-wrap gap-3 mt-8">
-            {["ISO Certified", "24/7 Support", "5★ Rated"].map((b) => (
-              <span
-                key={b}
-                className="px-3 py-1 rounded-full text-xs font-bold text-teal-600 bg-teal-50 border border-teal-100"
-              >
-                {b}
-              </span>
-            ))}
-          </div>
+          
         </div>
       </div>
     </section>
