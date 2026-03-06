@@ -18,11 +18,15 @@ const hours = [
 ];
 
 const AboutMednix = () => {
+
   return (
     <section className="font-sans bg-white overflow-hidden">
-      <div className="max-w-[1200px] mx-auto grid gap-12 px-6 md:px-8 lg:px-12 py-16 md:py-20 grid-cols-1 lg:grid-cols-2 items-start">
+      <div
+        className="max-w-[1200px] mx-auto grid gap-12 px-6 md:px-8 lg:px-12 py-16 md:py-20 grid-cols-1 lg:grid-cols-2 items-start"
+   
+      >
         {/* LEFT */}
-        <div className="space-y-4">
+        <div className="space-y-5">
           <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-gray-300 bg-white text-gray-700 font-semibold text-xs">
             <span className="w-2 h-2 rounded-full bg-teal-500 block" />
             About Mednix
@@ -30,37 +34,34 @@ const AboutMednix = () => {
 
           <h2 className="text-[2rem] font-bold text-gray-900 leading-tight">
             Caring for You Like
-            <br />
-            <span className="  font-semibold italic text-teal-600 leading-tight">
-              Family Health
-            </span>
           </h2>
+          <span className="block text-[2rem] font-semibold italic text-teal-600 leading-tight">
+            Family Health
+          </span>
 
           {/* Hours card */}
-          <div className=" relative ">
-            <div className="lg:p-5 bg-white lg:absolute -top-25 lg:rounded-2xl right-0">
-              <div className=" bg-gradient-to-br from-teal-600 to-cyan-600 text-white rounded-t-2xl lg:rounded-xl p-6 shadow-xl">
-                <p className="font-bold text-sm mb-4">Opening Hours:</p>
-                {hours.map((h) => (
-                  <div
-                    key={h.day}
-                    className="flex justify-between items-center py-1 border-b last:border-b-0 text-xs font-medium"
-                  >
-                    <span className="text-white/80">{h.day}</span>
-                    <span className="font-bold">{h.time}</span>
-                  </div>
-                ))}
-              </div>
+          <div className="relative space-y-6">
+            <div className="bg-gradient-to-br from-teal-600 to-cyan-600 text-white rounded-xl p-6 shadow-xl">
+              <p className="font-bold text-sm mb-4">Opening Hours:</p>
+              {hours.map((h) => (
+                <div
+                  key={h.day}
+                  className="flex justify-between items-center py-1 border-b last:border-b-0 text-xs font-medium"
+                >
+                  <span className="text-white/80">{h.day}</span>
+                  <span className="font-bold">{h.time}</span>
+                </div>
+              ))}
             </div>
 
             {/* Team photo */}
-            <div className="rounded-b-2xl lg:rounded-xl overflow-hidden  h-72">
+            <div className="rounded-xl overflow-hidden relative h-72">
               <img
                 src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&q=80"
                 alt="Medical team"
                 className="w-full h-full object-cover object-top"
               />
-              <div className=" bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white/50 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white/50 to-transparent" />
             </div>
           </div>
         </div>
@@ -115,14 +116,15 @@ const AboutMednix = () => {
 
           {/* Description */}
           <p className="text-sm text-gray-500 max-w-[380px] leading-relaxed">
-            We're committed to offering compassionate and comprehensive
-            healthcare tailored to your needs. At Mednix, your health is our
-            priority every step of the way.
+            We're committed to offering compassionate and comprehensive healthcare
+            tailored to your needs. At Mednix, your health is our priority every
+            step of the way.
           </p>
 
           {/* Button */}
           <button className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-br from-teal-600 to-cyan-600 text-white font-bold text-sm transition-transform transform hover:translate-x-1 hover:shadow-lg">
             Discover More
+            
           </button>
 
           {/* Trust badges */}
@@ -138,6 +140,8 @@ const AboutMednix = () => {
           </div>
         </div>
       </div>
+
+  
     </section>
   );
 };
