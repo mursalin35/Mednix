@@ -1,15 +1,5 @@
-import { useRef } from "react";
-
-const specialties = [
-  "General Surgery",
-  "Cardiology",
-  "Neurology",
-  "Dental Care",
-  "Ophthalmology",
-  "Orthopedics",
-  "Pediatrics",
-  "Oncology",
-];
+import React from "react";
+import TextMarquee from "./TextMarquee";
 
 const hours = [
   { day: "Mon – Fri", time: "9:00 – 18:00" },
@@ -75,7 +65,7 @@ const AboutMednix = () => {
                 +
               </span>
             </div>
-           
+
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10 mix-blend-multiply">
               <img
                 src="https://www.chesshealthsolutions.com/wp-content/uploads/2023/10/iStock-1473559425.jpg"
@@ -86,19 +76,19 @@ const AboutMednix = () => {
           </div>
 
           {/* -------------------------- */}
-  <div class="relative flex    bg-white min-h-[40px]">
-  
-  <div class="relative z-10">
-    <h1 class="text-[200px]  font-black  leading-none tracking-tighter
+          <div class="relative flex    bg-white min-h-[40px]">
+            <div class="relative z-10">
+              <h1
+                class="text-[200px]  font-black  leading-none tracking-tighter
                bg-[url('https://www.chenmed.com/sites/default/files/2024-06/Patient-Centered%20Care%20Strategies%20for%20Building%20Strong%20Doctor-Patient%20Relationships%20.jpg')] 
                bg-cover bg-center bg-no-repeat 
                bg-clip-text text-transparent 
-               drop-shadow-2xl">
-      25+
-    </h1>
-  </div>
-
-</div>
+               drop-shadow-2xl"
+              >
+                25+
+              </h1>
+            </div>
+          </div>
 
           {/* __________________________________ */}
 
@@ -125,8 +115,6 @@ const AboutMednix = () => {
             </p>
           </div>
 
-  
-
           {/* Description */}
           <p className="text-sm text-gray-500 max-w-[380px] leading-relaxed">
             We're committed to offering compassionate and comprehensive
@@ -138,9 +126,28 @@ const AboutMednix = () => {
           <button className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-br from-teal-600 to-cyan-600 text-white font-bold text-sm transition-transform transform hover:translate-x-1 hover:shadow-lg">
             Discover More
           </button>
-
-          
         </div>
+      </div>
+
+      {/* text slide bar  */}
+      <div>
+        <TextMarquee
+          items={[
+            "General Surgery",
+            "Cardiology",
+            "Neurology",
+            "Dental Care",
+            "Ophthalmology",
+            "Orthopedics",
+            "Pediatrics",
+            "Oncology",
+          ]}
+          speed={18}
+          bgColor=""
+          textColor="#0B0B45"
+          iconColor="#0B0B45"
+          textSize="3rem"
+        />
       </div>
     </section>
   );
